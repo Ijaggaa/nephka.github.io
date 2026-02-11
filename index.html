@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>NEPHKA Luxury Marketplace</title>
+<title>NEPHKA Official Collection</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body{margin:0;font-family:Helvetica;background:white;color:#111}
+body{margin:0;font-family:Helvetica}
 a{text-decoration:none;color:black}
 
 /* NAVBAR */
@@ -13,26 +13,15 @@ a{text-decoration:none;color:black}
 padding:20px;border-bottom:1px solid #eee}
 .nav a{margin:15px}
 
-/* HERO */
-.hero{
-height:90vh;
-background:url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1600') center/cover;
-display:flex;flex-direction:column;justify-content:center;align-items:center;
-color:white;text-align:center;
-}
-.btn{background:black;color:white;padding:15px 30px;margin-top:20px}
+/* HEADER */
+.header{text-align:center;padding:50px}
+.header h1{letter-spacing:3px}
 
-/* SECTION */
-.section{padding:90px 10%;text-align:center}
-
-/* CATEGORIES */
-.categories{display:flex;gap:30px;margin-top:40px}
-.cat{flex:1;height:250px;color:white;display:flex;align-items:center;justify-content:center;font-size:28px}
-
-/* BRANDS */
-.brands{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:40px}
-
-.footer{background:#111;color:white;padding:60px;text-align:center}
+/* PRODUCTS */
+.products{display:flex;flex-wrap:wrap;gap:50px;padding:50px;justify-content:center}
+.card{width:260px;text-align:center}
+.card img{width:100%}
+.price{font-weight:bold;font-size:18px;margin-top:10px}
 </style>
 </head>
 
@@ -43,6 +32,7 @@ color:white;text-align:center;
 <h2>NEPHKA</h2>
 <div>
 <a href="index.html">Home</a>
+<a href="nephka.html">NEPHKA</a>
 <a href="men.html">Men</a>
 <a href="women.html">Women</a>
 <a href="bags.html">Bags</a>
@@ -51,36 +41,40 @@ color:white;text-align:center;
 </div>
 </div>
 
-<!-- HERO -->
-<section class="hero">
-<h1>Luxury Multi-Brand Marketplace</h1>
-<p>Shop Gucci • Prada • Dior • Versace & more</p>
-<a href="men.html" class="btn">Shop Now</a>
-</section>
-
-<!-- CATEGORIES -->
-<section class="section">
-<h2>Shop Categories</h2>
-<div class="categories">
-<a href="men.html" class="cat" style="background:url('https://images.unsplash.com/photo-1520975661595-6453be3f7070?w=800') center/cover">MEN</a>
-<a href="women.html" class="cat" style="background:url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=800') center/cover">WOMEN</a>
-<a href="bags.html" class="cat" style="background:url('https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=800') center/cover">BAGS</a>
+<!-- HEADER -->
+<div class="header">
+<h1>NEPHKA OFFICIAL COLLECTION</h1>
+<p>Luxury Streetwear Designed for Modern Lifestyle</p>
 </div>
-</section>
 
-<!-- BRANDS -->
-<section class="section">
-<h2>Featured Brands</h2>
-<div class="brands">
-<div>GUCCI</div><div>PRADA</div><div>DIOR</div><div>VERSACE</div>
-<div>BURBERRY</div><div>BALMAIN</div><div>VALENTINO</div><div>GIVENCHY</div>
+<!-- PRODUCTS -->
+<div class="products">
+
+<div class="card">
+<a href="product.html">
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600">
+</a>
+<h3>NEPHKA Oversized Tee</h3>
+<p class="price">₹12,999</p>
 </div>
-</section>
 
-<section class="footer">
-<h2>NEPHKA</h2>
-<p>Luxury Marketplace • India</p>
-</section>
+<div class="card">
+<a href="product.html">
+<img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=600">
+</a>
+<h3>NEPHKA Premium Hoodie</h3>
+<p class="price">₹18,999</p>
+</div>
+
+<div class="card">
+<a href="product.html">
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600">
+</a>
+<h3>NEPHKA Luxury Sneakers</h3>
+<p class="price">₹24,999</p>
+</div>
+
+</div>
 
 </body>
 </html>
