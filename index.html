@@ -6,17 +6,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
 <style>
-body{margin:0;font-family:Inter}
+body{margin:0;font-family:Inter;background:#fafafa}
 a{text-decoration:none;color:black}
 
 /* NAVBAR */
-.nav{display:flex;justify-content:space-between;padding:20px 8%;border-bottom:1px solid #eee}
+.nav{display:flex;justify-content:space-between;padding:20px 8%;border-bottom:1px solid #eee;background:white}
 .nav a{margin-left:20px}
 
 /* HERO */
 .hero{
 height:90vh;
-background:url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1600') center/cover;
+background:url('https://picsum.photos/1600/900?fashion') center/cover;
 display:flex;flex-direction:column;justify-content:center;align-items:center;
 color:white;text-align:center;
 }
@@ -24,11 +24,11 @@ color:white;text-align:center;
 
 /* PRODUCTS GRID */
 .products{display:grid;grid-template-columns:repeat(4,1fr);gap:25px;padding:60px 8%}
-.products img{width:100%}
+.products img{width:100%;border-radius:8px}
 .price{font-weight:bold}
 
 /* FOOTER */
-.footer{background:#111;color:white;text-align:center;padding:60px}
+.footer{background:#111;color:white;text-align:center;padding:60px;margin-top:40px}
 </style>
 </head>
 
@@ -55,7 +55,7 @@ let products="";
 for(let i=1;i<=80;i++){
 products+=`
 <div>
-<img src="https://source.unsplash.com/400x400/?fashion,${i}">
+<img src="https://picsum.photos/400?random=${i}">
 <p>Luxury Product ${i}</p>
 <p class="price">₹${(Math.floor(Math.random()*80)+20)},999</p>
 <a href="https://wa.me/919813070099?text=I want Luxury Product ${i}" 
@@ -73,6 +73,7 @@ document.write(products);
 <div class="footer">
 <h2>NEPHKA</h2>
 <p>Luxury Marketplace India</p>
+<p>WhatsApp Orders Available</p>
 </div>
 
 </body>
