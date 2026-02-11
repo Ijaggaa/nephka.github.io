@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>NEPHKA Luxury Store</title>
+<title>NEPHKA Luxury Marketplace</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -16,11 +16,21 @@ background:url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1
 display:flex;flex-direction:column;justify-content:center;align-items:center;
 color:white;text-align:center;
 }
-.hero h1{font-size:60px;letter-spacing:5px}
+.hero h1{font-size:60px;letter-spacing:6px}
 .btn{background:black;color:white;padding:15px 30px;margin-top:20px}
 
 /* SECTION */
 .section{padding:90px 10%;text-align:center}
+
+/* BRAND GRID */
+.brands{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+margin-top:40px;
+font-size:22px;
+letter-spacing:2px;
+}
 
 /* CATEGORIES */
 .categories{display:flex;gap:30px;margin-top:40px}
@@ -30,24 +40,30 @@ color:white;text-align:center;
 .products{display:flex;gap:40px;margin-top:40px}
 .card img{width:100%}
 
-/* FOOTER */
 .footer{background:#111;color:white;padding:60px;text-align:center}
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
 <section class="hero">
 <h1>NEPHKA</h1>
-<p>Luxury Fashion • Beauty • Lifestyle</p>
-<a href="#shop" class="btn">Shop Collection</a>
+<p>Luxury Multi-Brand Marketplace</p>
+<a href="#brands" class="btn">Explore Brands</a>
 </section>
 
-<!-- CATEGORIES -->
-<section class="section" id="shop">
-<h2>Shop Categories</h2>
+<section class="section" id="brands">
+<h2>Shop by Brands</h2>
 
+<div class="brands">
+<div>GUCCI</div><div>PRADA</div><div>DIOR</div><div>VERSACE</div>
+<div>LOUIS VUITTON</div><div>BURBERRY</div><div>BALMAIN</div><div>VALENTINO</div>
+<div>ARMANI</div><div>FENDI</div><div>GIVENCHY</div><div>MONCLER</div>
+</div>
+</section>
+
+<section class="section">
+<h2>Shop Categories</h2>
 <div class="categories">
 <div class="cat" style="background:url('https://images.unsplash.com/photo-1520975661595-6453be3f7070?w=800') center/cover">MEN</div>
 <div class="cat" style="background:url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=800') center/cover">WOMEN</div>
@@ -55,41 +71,39 @@ color:white;text-align:center;
 </div>
 </section>
 
-<!-- FEATURED -->
 <section class="section">
-<h2>Featured Products</h2>
-
+<h2>Featured Luxury Picks</h2>
 <div class="products">
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600">
-<h3>Premium Oversized Tee</h3>
-<h3>₹2,999</h3>
+<h3>Designer T-Shirt</h3>
+<h3>₹14,999</h3>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=600">
-<h3>Luxury Hoodie</h3>
-<h3>₹4,999</h3>
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600">
+<h3>Luxury Sneakers</h3>
+<h3>₹39,999</h3>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600">
-<h3>Luxury Lip Kit</h3>
-<h3>₹1,499</h3>
+<h3>Luxury Lipstick</h3>
+<h3>₹4,999</h3>
 </div>
 
 </div>
 </section>
 
 <section class="section">
-<h2>About NEPHKA</h2>
-<p>NEPHKA is a luxury lifestyle brand inspired by global fashion and modern culture.</p>
+<h2>100% Authentic Products</h2>
+<p>All products sourced from verified luxury distributors.</p>
 </section>
 
 <section class="footer">
 <h2>NEPHKA</h2>
-<p>Luxury Store • India</p>
+<p>Luxury Marketplace • India</p>
 </section>
 
 </body>
