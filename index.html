@@ -1,29 +1,80 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
 <title>NEPHKA Streetwear</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="stylesheet" href="assets/css/main.css" />
+
+<style>
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.hero{
+text-align:center;
+padding:120px 20px;
+background:linear-gradient(135deg,#6c5ce7,#8e44ad);
+color:white;
+}
+
+.btn{
+background:black;
+color:white;
+padding:15px 25px;
+text-decoration:none;
+border-radius:5px;
+display:inline-block;
+margin-top:20px;
+}
+
+.section{
+padding:70px 20px;
+text-align:center;
+}
+
+.products{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.card{
+width:250px;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 15px rgba(0,0,0,0.1);
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+}
+
+.footer{
+background:#111;
+color:white;
+padding:40px;
+text-align:center;
+}
+</style>
 </head>
 
 <body>
 
-<section style="text-align:center;padding:100px;background:#6c5ce7;color:white;">
+<!-- HERO -->
+<section class="hero">
 <h1>NEPHKA STREETWEAR</h1>
 <p>Premium Streetwear for the Modern Generation</p>
-
-<br>
-
-<a href="https://wa.me/919813070099" 
-style="background:black;color:white;padding:15px 25px;text-decoration:none;">
+<a href="https://wa.me/919813070099" class="btn" target="_blank">
 Order on WhatsApp
 </a>
-
 </section>
 
-
-<section style="padding:60px;text-align:center;">
+<!-- ABOUT -->
+<section class="section">
 <h2>About NEPHKA</h2>
 <p>
 NEPHKA is a modern streetwear brand focused on style, comfort and confidence.
@@ -31,22 +82,52 @@ We create outfits designed for everyday lifestyle and bold personalities.
 </p>
 </section>
 
+<!-- PRODUCTS -->
+<section class="section" style="background:#f5f5f5;">
+<h2>Our Collection</h2>
 
-<section style="padding:60px;text-align:center;background:#f5f5f5;">
+<div class="products">
+
+<div class="card">
+<img src="https://via.placeholder.com/300">
+<h3>Black Oversized Tee</h3>
+<p>₹999</p>
+<a href="https://wa.me/919813070099" class="btn" target="_blank">Order Now</a>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/300">
+<h3>White Minimal Tee</h3>
+<p>₹899</p>
+<a href="https://wa.me/919813070099" class="btn" target="_blank">Order Now</a>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/300">
+<h3>Purple Street Tee</h3>
+<p>₹1099</p>
+<a href="https://wa.me/919813070099" class="btn" target="_blank">Order Now</a>
+</div>
+
+</div>
+</section>
+
+<!-- WHY US -->
+<section class="section">
 <h2>Why Choose Us</h2>
 <p>✔ Premium Quality</p>
 <p>✔ Unique Designs</p>
 <p>✔ Affordable Pricing</p>
-<p>✔ Fast Support</p>
+<p>✔ Fast WhatsApp Support</p>
 </section>
 
-
-<section style="padding:60px;text-align:center;">
+<!-- CONTACT -->
+<section class="footer">
 <h2>Contact</h2>
 <p>Rohtak, Haryana</p>
 <p>WhatsApp: 9813070099</p>
-<a href="https://www.instagram.com/pardipkaliraman">
-Open Instagram
+<a href="https://www.instagram.com/pardipkaliraman" style="color:white;">
+Instagram
 </a>
 </section>
 
