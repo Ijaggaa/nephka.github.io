@@ -11,41 +11,81 @@ a{text-decoration:none}
 
 .hero{
 background:linear-gradient(135deg,#6c5ce7,#8e44ad);
-color:white;
-text-align:center;
-padding:120px 20px;
+color:white;text-align:center;padding:120px 20px;
 }
 .btn{
-background:black;color:white;
-padding:12px 22px;border-radius:5px;
-display:inline-block;margin-top:15px;
+background:black;color:white;padding:12px 22px;border-radius:5px;
+display:inline-block;margin:10px;
 }
+.pay{background:#27ae60}
+
 .section{padding:70px 20px;text-align:center}
 .grey{background:#f5f5f5}
 
 .products{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;margin-top:40px}
-.card{
-width:250px;padding:20px;border-radius:10px;
-box-shadow:0 0 15px rgba(0,0,0,0.1);
-}
+.card{width:250px;padding:20px;border-radius:10px;box-shadow:0 0 15px rgba(0,0,0,0.1)}
 .card img{width:100%;border-radius:10px}
+
 .footer{background:#111;color:white;padding:50px;text-align:center}
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
 <section class="hero">
 <h1>NEPHKA STORE</h1>
 <p>Fashion • Beauty • Lifestyle</p>
-<a href="https://wa.me/919813070099" class="btn">Shop on WhatsApp</a>
+<a href="https://wa.me/919813070099" class="btn">Order on WhatsApp</a>
+<a href="upi://pay?pa=kaliramn@ybl&pn=NEPHKA&cu=INR" class="btn pay">Pay Now</a>
 </section>
 
-<!-- STREETWEAR -->
 <section class="section">
-<h2>Streetwear Collection</h2>
+<h2>Streetwear</h2>
 <div class="products">
 
 <div class="card">
-<img src="https://images.unsplash.com/pho
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600">
+<h3>Oversized T-Shirt</h3><h3>₹999</h3>
+<a href="https://wa.me/919813070099" class="btn">Order</a>
+<a href="upi://pay?pa=kaliramn@ybl&pn=NEPHKA&cu=INR" class="btn pay">Pay</a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=600">
+<h3>Hoodie</h3><h3>₹1499</h3>
+<a href="https://wa.me/919813070099" class="btn">Order</a>
+<a href="upi://pay?pa=kaliramn@ybl&pn=NEPHKA&cu=INR" class="btn pay">Pay</a>
+</div>
+
+</div>
+</section>
+
+<section class="section grey">
+<h2>Cosmetics</h2>
+<div class="products">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600">
+<h3>Matte Lipstick</h3><h3>₹299</h3>
+<a href="https://wa.me/919813070099" class="btn">Order</a>
+<a href="upi://pay?pa=kaliramn@ybl&pn=NEPHKA&cu=INR" class="btn pay">Pay</a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=600">
+<h3>Foundation</h3><h3>₹499</h3>
+<a href="https://wa.me/919813070099" class="btn">Order</a>
+<a href="upi://pay?pa=kaliramn@ybl&pn=NEPHKA&cu=INR" class="btn pay">Pay</a>
+</div>
+
+</div>
+</section>
+
+<section class="footer">
+<h2>NEPHKA STORE</h2>
+<p>Rohtak • India</p>
+<p>UPI: kaliramn@ybl</p>
+</section>
+
+</body>
+</html>
