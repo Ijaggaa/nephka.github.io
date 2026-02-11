@@ -6,39 +6,31 @@
 
 <style>
 body{margin:0;font-family:Helvetica;background:white;color:#111}
-h1,h2,h3{margin:0}
 a{text-decoration:none;color:black}
+
+/* NAVBAR */
+.nav{display:flex;justify-content:space-between;align-items:center;
+padding:20px;border-bottom:1px solid #eee}
+.nav a{margin:15px}
 
 /* HERO */
 .hero{
-height:100vh;
+height:90vh;
 background:url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1600') center/cover;
 display:flex;flex-direction:column;justify-content:center;align-items:center;
 color:white;text-align:center;
 }
-.hero h1{font-size:60px;letter-spacing:6px}
 .btn{background:black;color:white;padding:15px 30px;margin-top:20px}
 
 /* SECTION */
 .section{padding:90px 10%;text-align:center}
 
-/* BRAND GRID */
-.brands{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:30px;
-margin-top:40px;
-font-size:22px;
-letter-spacing:2px;
-}
-
 /* CATEGORIES */
 .categories{display:flex;gap:30px;margin-top:40px}
-.cat{flex:1;height:300px;color:white;display:flex;align-items:center;justify-content:center;font-size:30px}
+.cat{flex:1;height:250px;color:white;display:flex;align-items:center;justify-content:center;font-size:28px}
 
-/* PRODUCTS */
-.products{display:flex;gap:40px;margin-top:40px}
-.card img{width:100%}
+/* BRANDS */
+.brands{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:40px}
 
 .footer{background:#111;color:white;padding:60px;text-align:center}
 </style>
@@ -46,59 +38,43 @@ letter-spacing:2px;
 
 <body>
 
-<section class="hero">
-<h1>NEPHKA</h1>
-<p>Luxury Multi-Brand Marketplace</p>
-<a href="#brands" class="btn">Explore Brands</a>
-</section>
-
-<section class="section" id="brands">
-<h2>Shop by Brands</h2>
-
-<div class="brands">
-<div>GUCCI</div><div>PRADA</div><div>DIOR</div><div>VERSACE</div>
-<div>LOUIS VUITTON</div><div>BURBERRY</div><div>BALMAIN</div><div>VALENTINO</div>
-<div>ARMANI</div><div>FENDI</div><div>GIVENCHY</div><div>MONCLER</div>
+<!-- NAVBAR -->
+<div class="nav">
+<h2>NEPHKA</h2>
+<div>
+<a href="index.html">Home</a>
+<a href="men.html">Men</a>
+<a href="women.html">Women</a>
+<a href="bags.html">Bags</a>
+<a href="shoes.html">Shoes</a>
+<a href="beauty.html">Beauty</a>
 </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+<h1>Luxury Multi-Brand Marketplace</h1>
+<p>Shop Gucci • Prada • Dior • Versace & more</p>
+<a href="men.html" class="btn">Shop Now</a>
 </section>
 
+<!-- CATEGORIES -->
 <section class="section">
 <h2>Shop Categories</h2>
 <div class="categories">
-<div class="cat" style="background:url('https://images.unsplash.com/photo-1520975661595-6453be3f7070?w=800') center/cover">MEN</div>
-<div class="cat" style="background:url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=800') center/cover">WOMEN</div>
-<div class="cat" style="background:url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800') center/cover">BEAUTY</div>
+<a href="men.html" class="cat" style="background:url('https://images.unsplash.com/photo-1520975661595-6453be3f7070?w=800') center/cover">MEN</a>
+<a href="women.html" class="cat" style="background:url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=800') center/cover">WOMEN</a>
+<a href="bags.html" class="cat" style="background:url('https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=800') center/cover">BAGS</a>
 </div>
 </section>
 
+<!-- BRANDS -->
 <section class="section">
-<h2>Featured Luxury Picks</h2>
-<div class="products">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600">
-<h3>Designer T-Shirt</h3>
-<h3>₹14,999</h3>
+<h2>Featured Brands</h2>
+<div class="brands">
+<div>GUCCI</div><div>PRADA</div><div>DIOR</div><div>VERSACE</div>
+<div>BURBERRY</div><div>BALMAIN</div><div>VALENTINO</div><div>GIVENCHY</div>
 </div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600">
-<h3>Luxury Sneakers</h3>
-<h3>₹39,999</h3>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600">
-<h3>Luxury Lipstick</h3>
-<h3>₹4,999</h3>
-</div>
-
-</div>
-</section>
-
-<section class="section">
-<h2>100% Authentic Products</h2>
-<p>All products sourced from verified luxury distributors.</p>
 </section>
 
 <section class="footer">
