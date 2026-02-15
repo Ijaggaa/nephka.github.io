@@ -1,4 +1,62 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+<title>NEPHKA Luxury Store</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
+
+<style>
+body{margin:0;font-family:Inter;background:#fafafa}
+a{text-decoration:none;color:black}
+
+/* NAVBAR */
+.nav{display:flex;justify-content:space-between;padding:20px 8%;border-bottom:1px solid #eee;background:white}
+.nav a{margin-left:20px}
+
+/* HERO */
+.hero{
+height:80vh;
+background:url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d') center/cover;
+display:flex;flex-direction:column;justify-content:center;align-items:center;
+color:white;text-align:center;
+}
+.btn{background:black;color:white;padding:15px 30px;margin-top:20px}
+
+/* PRODUCTS GRID */
+.products{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+padding:60px 8%;
+}
+.products img{width:100%;border-radius:10px}
+.price{font-weight:bold;margin:5px 0}
+.buy{background:black;color:white;padding:8px 15px;display:inline-block;margin-top:5px}
+
+/* FOOTER */
+.footer{background:#111;color:white;text-align:center;padding:50px;margin-top:40px}
+</style>
+</head>
+
+<body>
+
+<div class="nav">
+<h2>NEPHKA</h2>
+<div>
+<a href="#shop">Shop</a>
+<a href="https://wa.me/919813070099">Contact</a>
+</div>
+</div>
+
+<section class="hero">
+<h1>LUXURY MULTI-BRAND STORE</h1>
+<p>Gucci • Prada • Dior • Versace • Balmain</p>
+<a href="#shop" class="btn">SHOP NOW</a>
+</section>
+
+<section id="shop" class="products">
+
 <div>
 <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff">
 <p>Gucci Sneakers</p>
@@ -24,7 +82,7 @@
 <img src="https://images.unsplash.com/photo-1516826957135-700dedea698c">
 <p>Versace T-Shirt</p>
 <p class="price">₹39,999</p>
-<a class="buy" href="https://wa.me/919813070099?text=I want Versace TShirt">Buy</a>
+<a class="buy" href="https://wa.me/919813070099?text=I want Versace Tshirt">Buy</a>
 </div>
 
 <div>
@@ -54,3 +112,13 @@
 <p class="price">₹14,999</p>
 <a class="buy" href="https://wa.me/919813070099?text=I want Brush Kit">Buy</a>
 </div>
+
+</section>
+
+<div class="footer">
+<h2>NEPHKA</h2>
+<p>Luxury Marketplace India</p>
+</div>
+
+</body>
+</html>
