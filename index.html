@@ -9,32 +9,14 @@
 <style>
 body{margin:0;font-family:Inter;background:#fafafa}
 a{text-decoration:none;color:black}
-
-/* NAVBAR */
 .nav{display:flex;justify-content:space-between;padding:20px 8%;border-bottom:1px solid #eee;background:white}
 .nav a{margin-left:20px}
-
-/* HERO */
-.hero{
-height:80vh;
-background:url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d') center/cover;
-display:flex;flex-direction:column;justify-content:center;align-items:center;
-color:white;text-align:center;
-}
+.hero{height:80vh;background:url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d') center/cover;display:flex;flex-direction:column;justify-content:center;align-items:center;color:white;text-align:center;}
 .btn{background:black;color:white;padding:15px 30px;margin-top:20px}
-
-/* PRODUCTS GRID */
-.products{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:30px;
-padding:60px 8%;
-}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;padding:60px 8%}
 .products img{width:100%;border-radius:10px}
 .price{font-weight:bold;margin:5px 0}
 .buy{background:black;color:white;padding:8px 15px;display:inline-block;margin-top:5px}
-
-/* FOOTER */
 .footer{background:#111;color:white;text-align:center;padding:50px;margin-top:40px}
 </style>
 </head>
@@ -57,61 +39,35 @@ padding:60px 8%;
 
 <section id="shop" class="products">
 
-<div>
-<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff">
-<p>Gucci Sneakers</p>
-<p class="price">₹79,999</p>
-<a class="buy" href="https://wa.me/919813070099?text=I want Gucci Sneakers">Buy</a>
-</div>
+<!-- SHOES -->
+<div><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff"><p>Gucci Sneakers</p><p class="price">₹79,999</p><a class="buy" href="https://wa.me/919813070099?text=Gucci Sneakers">Buy</a></div>
+<div><img src="https://images.unsplash.com/photo-1520975922284-91c8b7b1c1c9"><p>Prada Sneakers</p><p class="price">₹69,999</p><a class="buy" href="#">Buy</a></div>
+<div><img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519"><p>Dior Sneakers</p><p class="price">₹89,999</p><a class="buy" href="#">Buy</a></div>
+<div><img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5"><p>Louboutin Sneakers</p><p class="price">₹95,999</p><a class="buy" href="#">Buy</a></div>
 
-<div>
-<img src="https://images.unsplash.com/photo-1520975922284-91c8b7b1c1c9">
-<p>Prada Sneakers</p>
-<p class="price">₹69,999</p>
-<a class="buy" href="https://wa.me/919813070099?text=I want Prada Sneakers">Buy</a>
-</div>
+<!-- CLOTHES -->
+<div><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab"><p>Balmain Hoodie</p><p class="price">₹49,999</p></div>
+<div><img src="https://images.unsplash.com/photo-1520975661595-6453be3f7070"><p>Versace T-Shirt</p><p class="price">₹39,999</p></div>
+<div><img src="https://images.unsplash.com/photo-1516826957135-700dedea698c"><p>Off White Hoodie</p><p class="price">₹59,999</p></div>
+<div><img src="https://images.unsplash.com/photo-1593032465171-8e2d6cddf2b3"><p>Givenchy T-Shirt</p><p class="price">₹42,999</p></div>
 
-<div>
-<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
-<p>Balmain Hoodie</p>
-<p class="price">₹49,999</p>
-<a class="buy" href="https://wa.me/919813070099?text=I want Balmain Hoodie">Buy</a>
-</div>
+<!-- BAGS -->
+<div><img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3"><p>Fendi Bag</p><p class="price">₹1,29,999</p></div>
+<div><img src="https://images.unsplash.com/photo-1618354691551-44de113f0164"><p>Louis Vuitton Bag</p><p class="price">₹1,49,999</p></div>
+<div><img src="https://images.unsplash.com/photo-1591561954557-26941169b49e"><p>Hermes Bag</p><p class="price">₹2,19,999</p></div>
+<div><img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba6"><p>Luxury Leather Bag</p><p class="price">₹99,999</p></div>
 
-<div>
-<img src="https://images.unsplash.com/photo-1516826957135-700dedea698c">
-<p>Versace T-Shirt</p>
-<p class="price">₹39,999</p>
-<a class="buy" href="https://wa.me/919813070099?text=I want Versace Tshirt">Buy</a>
-</div>
+<!-- SUNGLASSES -->
+<div><img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083"><p>Tom Ford Sunglasses</p><p class="price">₹34,999</p></div>
+<div><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9"><p>Gucci Sunglasses</p><p class="price">₹32,999</p></div>
+<div><img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f"><p>Prada Sunglasses</p><p class="price">₹29,999</p></div>
+<div><img src="https://images.unsplash.com/photo-1591076482161-42ce6da69f67"><p>Dior Sunglasses</p><p class="price">₹39,999</p></div>
 
-<div>
-<img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3">
-<p>Luxury Handbag</p>
-<p class="price">₹89,999</p>
-<a class="buy" href="https://wa.me/919813070099?text=I want Luxury Bag">Buy</a>
-</div>
-
-<div>
-<img src="https://images.unsplash.com/photo-1618354691551-44de113f0164">
-<p>Tom Ford Sunglasses</p>
-<p class="price">₹34,999</p>
-<a class="buy" href="https://wa.me/919813070099?text=I want Sunglasses">Buy</a>
-</div>
-
-<div>
-<img src="https://images.unsplash.com/photo-1593032465171-8e2d6cddf2b3">
-<p>Luxury Lipstick Set</p>
-<p class="price">₹19,999</p>
-<a class="buy" href="https://wa.me/919813070099?text=I want Lipstick">Buy</a>
-</div>
-
-<div>
-<img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348">
-<p>Makeup Brush Kit</p>
-<p class="price">₹14,999</p>
-<a class="buy" href="https://wa.me/919813070099?text=I want Brush Kit">Buy</a>
-</div>
+<!-- BEAUTY -->
+<div><img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348"><p>Luxury Lipstick Set</p><p class="price">₹19,999</p></div>
+<div><img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908"><p>Makeup Brush Kit</p><p class="price">₹14,999</p></div>
+<div><img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa"><p>Luxury Perfume</p><p class="price">₹24,999</p></div>
+<div><img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9"><p>Skincare Kit</p><p class="price">₹29,999</p></div>
 
 </section>
 
