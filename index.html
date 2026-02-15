@@ -1,92 +1,56 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>NEPHKA Luxury Store</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
 
-<style>
-body{margin:0;font-family:Inter;background:#fafafa}
-a{text-decoration:none;color:black}
-
-/* NAVBAR */
-.nav{display:flex;justify-content:space-between;padding:20px 8%;border-bottom:1px solid #eee;background:white}
-.nav a{margin-left:20px}
-
-/* HERO */
-.hero{
-height:80vh;
-background:url('https://picsum.photos/1600/900?fashion') center/cover;
-display:flex;flex-direction:column;justify-content:center;align-items:center;
-color:white;text-align:center;
-}
-.btn{background:black;color:white;padding:15px 30px;margin-top:20px}
-
-/* PRODUCTS GRID */
-.products{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:30px;
-padding:60px 8%;
-}
-.products img{width:100%;border-radius:10px}
-.price{font-weight:bold;margin:5px 0}
-.buy{background:black;color:white;padding:8px 15px;display:inline-block;margin-top:5px}
-
-/* FOOTER */
-.footer{background:#111;color:white;text-align:center;padding:50px;margin-top:40px}
-</style>
-</head>
-
-<body>
-
-<div class="nav">
-<h2>NEPHKA</h2>
 <div>
-<a href="#shop">Shop</a>
-<a href="https://wa.me/919813070099">Contact</a>
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff">
+<p>Gucci Sneakers</p>
+<p class="price">₹79,999</p>
+<a class="buy" href="https://wa.me/919813070099?text=I want Gucci Sneakers">Buy</a>
 </div>
-</div>
 
-<section class="hero">
-<h1>LUXURY MULTI-BRAND STORE</h1>
-<p>Gucci • Prada • Dior • Versace • Balmain</p>
-<a href="#shop" class="btn">SHOP NOW</a>
-</section>
-
-<section id="shop" class="products">
-
-<script>
-const items=[
-"Gucci Sneakers","Prada Sneakers","Balmain Hoodie","Versace T-Shirt",
-"Louis Vuitton Belt","Dior Sneakers","Off-White Hoodie","Burberry Jacket",
-"Tom Ford Sunglasses","Fendi Bag","Valentino Heels","Givenchy Tee",
-"Armani Polo","Boss Jeans","Philipp Plein Sweatshirt","Moncler Jacket",
-"Ferragamo Loafers","Hermes Wallet","Louboutin Sneakers","Loewe Hoodie",
-"Luxury Jeans","Designer Belt","Premium Bag","Luxury Sunglasses",
-"Luxury Lipstick","Makeup Brush Kit","Premium Nail Polish","Skincare Kit"
-];
-
-let products="";
-for(let i=0;i<items.length;i++){
-products+=`
 <div>
-<img src="https://picsum.photos/400/500?random=${i}">
-<p>${items[i]}</p>
-<p class="price">₹${(Math.floor(Math.random()*70)+30)},999</p>
-<a class="buy" href="https://wa.me/919813070099?text=I want ${items[i]}">Buy</a>
-</div>
-`;
-}
-document.write(products);
-</script>
-
-</section>
-
-<div class="footer">
-<h2>NEPHKA</h2>
-<p>Luxury Marketplace India</p>
+<img src="https://images.unsplash.com/photo-1520975922284-91c8b7b1c1c9">
+<p>Prada Sneakers</p>
+<p class="price">₹69,999</p>
+<a class="buy" href="https://wa.me/919813070099?text=I want Prada Sneakers">Buy</a>
 </div>
 
-</body>
-</html>
+<div>
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+<p>Balmain Hoodie</p>
+<p class="price">₹49,999</p>
+<a class="buy" href="https://wa.me/919813070099?text=I want Balmain Hoodie">Buy</a>
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1516826957135-700dedea698c">
+<p>Versace T-Shirt</p>
+<p class="price">₹39,999</p>
+<a class="buy" href="https://wa.me/919813070099?text=I want Versace TShirt">Buy</a>
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3">
+<p>Luxury Handbag</p>
+<p class="price">₹89,999</p>
+<a class="buy" href="https://wa.me/919813070099?text=I want Luxury Bag">Buy</a>
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1618354691551-44de113f0164">
+<p>Tom Ford Sunglasses</p>
+<p class="price">₹34,999</p>
+<a class="buy" href="https://wa.me/919813070099?text=I want Sunglasses">Buy</a>
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1593032465171-8e2d6cddf2b3">
+<p>Luxury Lipstick Set</p>
+<p class="price">₹19,999</p>
+<a class="buy" href="https://wa.me/919813070099?text=I want Lipstick">Buy</a>
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348">
+<p>Makeup Brush Kit</p>
+<p class="price">₹14,999</p>
+<a class="buy" href="https://wa.me/919813070099?text=I want Brush Kit">Buy</a>
+</div>
