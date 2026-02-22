@@ -4,7 +4,6 @@
 <title>NEPHKA Luxury</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- GOOGLE FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat&display=swap" rel="stylesheet">
 
 <style>
@@ -16,70 +15,32 @@ body{
   color:white;
 }
 
-/* NAVBAR */
+/* NAV */
 .nav{
   display:flex;
   justify-content:space-between;
-  padding:25px 50px;
+  padding:20px 50px;
   background:black;
-  border-bottom:1px solid #222;
 }
-
 .logo{
-  font-family:'Playfair Display';
-  font-size:26px;
   color:gold;
-}
-
-.nav a{
-  color:white;
-  margin-left:20px;
-  text-decoration:none;
-  font-size:14px;
-}
-
-/* HERO */
-.hero{
-  height:90vh;
-  background:url('https://images.unsplash.com/photo-1520975922284-9e0ce827f4f6') center/cover;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-}
-
-.hero h1{
   font-family:'Playfair Display';
-  font-size:50px;
-  letter-spacing:2px;
-}
-
-.hero button{
-  margin-top:20px;
-  padding:12px 30px;
-  border:1px solid gold;
-  background:transparent;
-  color:gold;
-  cursor:pointer;
+  font-size:24px;
 }
 
 /* PRODUCTS */
 .products{
-  padding:60px;
+  padding:50px;
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
-  gap:40px;
+  gap:30px;
 }
 
 .card{
   background:#111;
-  padding:15px;
+  padding:10px;
   border-radius:10px;
-  transition:0.3s;
-}
-
-.card:hover{
-  transform:scale(1.05);
+  cursor:pointer;
 }
 
 .card img{
@@ -87,32 +48,50 @@ body{
   border-radius:10px;
 }
 
-.card h3{
+.price{color:gold}
+
+/* POPUP */
+.popup{
+  position:fixed;
+  top:0;left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.9);
+  display:none;
+  justify-content:center;
+  align-items:center;
+}
+
+.popup-box{
+  background:#111;
+  padding:30px;
+  width:90%;
+  max-width:400px;
+  border-radius:10px;
+}
+
+.popup select, .popup input{
+  width:100%;
+  padding:10px;
   margin-top:10px;
-  font-size:18px;
+  background:black;
+  color:white;
+  border:1px solid #333;
 }
 
-.price{
-  color:gold;
-  margin-top:5px;
-}
-
-button{
+.popup button{
   width:100%;
   padding:12px;
+  margin-top:15px;
   background:gold;
   border:none;
-  margin-top:10px;
-  cursor:pointer;
   font-weight:bold;
+  cursor:pointer;
 }
 
-/* FOOTER */
-.footer{
-  text-align:center;
-  padding:30px;
-  border-top:1px solid #222;
-  color:#aaa;
+.close{
+  float:right;
+  cursor:pointer;
 }
 
 </style>
@@ -120,76 +99,93 @@ button{
 
 <body>
 
-<!-- NAVBAR -->
 <div class="nav">
   <div class="logo">NEPHKA</div>
-  <div>
-    <a href="#">Home</a>
-    <a href="#">Men</a>
-    <a href="#">Women</a>
-    <a href="#">Luxury</a>
-  </div>
 </div>
 
-<!-- HERO -->
-<div class="hero">
-  <div>
-    <h1>ELITE LUXURY COLLECTION</h1>
-    <button>SHOP NOW</button>
-  </div>
-</div>
-
-<!-- PRODUCTS -->
 <div class="products">
 
-<div class="card">
+<div class="card" onclick="openProduct('Gucci Sneakers','₹72,999')">
 <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff">
 <h3>Gucci Sneakers</h3>
-<div class="price">₹72,999</div>
-<button>Buy Now</button>
+<p class="price">₹72,999</p>
 </div>
 
-<div class="card">
+<div class="card" onclick="openProduct('Balmain Hoodie','₹49,999')">
 <img src="https://images.unsplash.com/photo-1520975922284-9e0ce827f4f6">
-<h3>Balmain T-Shirt</h3>
-<div class="price">₹39,999</div>
-<button>Buy Now</button>
+<h3>Balmain Hoodie</h3>
+<p class="price">₹49,999</p>
 </div>
 
-<div class="card">
+<div class="card" onclick="openProduct('Off White Hoodie','₹59,999')">
 <img src="https://images.unsplash.com/photo-1521334884684-d80222895322">
 <h3>Off White Hoodie</h3>
-<div class="price">₹59,999</div>
-<button>Buy Now</button>
+<p class="price">₹59,999</p>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1526178613658-3f1622045557">
-<h3>Prada Sneakers</h3>
-<div class="price">₹64,999</div>
-<button>Buy Now</button>
-</div>
-
-<div class="card">
+<div class="card" onclick="openProduct('Versace T-Shirt','₹39,999')">
 <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b">
-<h3>Versace Shirt</h3>
-<div class="price">₹48,999</div>
-<button>Buy Now</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c">
-<h3>Burberry Jacket</h3>
-<div class="price">₹95,999</div>
-<button>Buy Now</button>
+<h3>Versace T-Shirt</h3>
+<p class="price">₹39,999</p>
 </div>
 
 </div>
 
-<!-- FOOTER -->
-<div class="footer">
-© 2026 NEPHKA Luxury Store
+<!-- POPUP -->
+<div class="popup" id="popup">
+  <div class="popup-box">
+    <span class="close" onclick="closePopup()">✖</span>
+
+    <h2 id="pname"></h2>
+    <p id="pprice"></p>
+
+    <select id="size">
+      <option>Select Size</option>
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+
+    <input type="number" id="qty" placeholder="Quantity" value="1">
+
+    <button onclick="orderNow()">Order on WhatsApp</button>
+  </div>
 </div>
+
+<script>
+
+let productName = "";
+let productPrice = "";
+
+function openProduct(name, price){
+  document.getElementById("popup").style.display="flex";
+  document.getElementById("pname").innerText = name;
+  document.getElementById("pprice").innerText = price;
+  productName = name;
+  productPrice = price;
+}
+
+function closePopup(){
+  document.getElementById("popup").style.display="none";
+}
+
+function orderNow(){
+  let size = document.getElementById("size").value;
+  let qty = document.getElementById("qty").value;
+
+  let msg = `Order Details:
+Product: ${productName}
+Price: ${productPrice}
+Size: ${size}
+Quantity: ${qty}`;
+
+  let url = "https://wa.me/919813070099?text=" + encodeURIComponent(msg);
+
+  window.open(url, '_blank');
+}
+
+</script>
 
 </body>
 </html>
