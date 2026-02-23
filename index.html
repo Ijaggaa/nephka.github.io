@@ -1,128 +1,105 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>NEPHKA Luxury</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEPHKA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
 
 <style>
 
 body{
   margin:0;
-  background:#0a0a0a;
-  color:white;
-  font-family:Montserrat;
+  font-family:Arial;
+  background:white;
+  color:black;
 }
 
-/* NAVBAR */
+/* NAV */
 .nav{
   display:flex;
   justify-content:space-between;
-  padding:20px 60px;
-  background:rgba(0,0,0,0.9);
-  position:sticky;
-  top:0;
+  padding:25px 60px;
+  border-bottom:1px solid #eee;
 }
+
 .logo{
-  font-family:'Playfair Display';
-  color:gold;
-  font-size:26px;
+  font-family:Playfair Display;
+  font-size:24px;
 }
+
 .nav a{
-  color:white;
-  margin:0 15px;
+  margin-left:25px;
   text-decoration:none;
-  font-size:14px;
+  color:black;
+  font-size:13px;
+  letter-spacing:1px;
 }
 
 /* HERO */
 .hero{
-  height:70vh;
+  height:80vh;
   background:url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d') center/cover;
   display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-}
-.hero h1{
-  font-size:50px;
-  font-family:'Playfair Display';
-}
-.hero button{
-  padding:12px 30px;
-  border:none;
-  background:gold;
-  margin-top:20px;
-  cursor:pointer;
+  align-items:flex-end;
+  padding:60px;
+  color:white;
 }
 
-/* PRODUCTS */
+.hero h1{
+  font-size:40px;
+  font-weight:500;
+}
+
+/* GRID */
 .products{
-  padding:60px;
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:30px;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  padding:60px;
 }
 
 .card{
-  background:#111;
-  border-radius:10px;
-  overflow:hidden;
-  transition:0.3s;
   cursor:pointer;
 }
-.card:hover{
-  transform:scale(1.05);
-}
+
 .card img{
   width:100%;
-  height:300px;
+  height:400px;
   object-fit:cover;
 }
+
 .card h3{
-  padding:10px;
-}
-.price{
-  color:gold;
-  padding:0 10px 10px;
+  font-size:14px;
+  margin-top:10px;
 }
 
-/* POPUP */
-.popup{
-  position:fixed;
-  top:0;left:0;
-  width:100%;height:100%;
-  background:rgba(0,0,0,0.9);
+.price{
+  font-size:13px;
+  color:#555;
+}
+
+/* PRODUCT PAGE */
+.product-page{
   display:none;
-  justify-content:center;
-  align-items:center;
+  padding:60px;
 }
-.popup-box{
-  background:#111;
-  padding:30px;
-  width:90%;
-  max-width:400px;
-  border-radius:10px;
+
+.product-page img{
+  width:400px;
 }
-.popup select,.popup input{
-  width:100%;
-  padding:10px;
-  margin-top:10px;
+
+.buy{
+  padding:12px 25px;
   background:black;
   color:white;
-  border:1px solid #333;
-}
-.popup button{
-  width:100%;
-  padding:12px;
-  margin-top:15px;
-  background:gold;
   border:none;
-  font-weight:bold;
+  margin-top:20px;
 }
-.close{
-  float:right;
+
+/* BACK */
+.back{
+  margin-bottom:20px;
   cursor:pointer;
 }
 
@@ -135,94 +112,82 @@ body{
 <div class="nav">
   <div class="logo">NEPHKA</div>
   <div>
-    <a href="#">Home</a>
-    <a href="#">Men</a>
-    <a href="#">Women</a>
-    <a href="#">Luxury</a>
+    <a href="#">MEN</a>
+    <a href="#">WOMEN</a>
+    <a href="#">NEW</a>
   </div>
 </div>
 
-<!-- HERO -->
+<!-- HOME -->
+<div id="home">
+
 <div class="hero">
-  <div>
-    <h1>Luxury Fashion Redefined</h1>
-    <button>Shop Now</button>
-  </div>
+  <h1>NEW SEASON COLLECTION</h1>
 </div>
 
-<!-- PRODUCTS -->
 <div class="products">
 
-<div class="card" onclick="openProduct('Gucci Sneakers','₹72,999')">
+<div class="card" onclick="openProduct('Premium Sneakers','₹49,999')">
 <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff">
-<h3>Gucci Sneakers</h3>
-<p class="price">₹72,999</p>
-</div>
-
-<div class="card" onclick="openProduct('Balmain Hoodie','₹49,999')">
-<img src="https://images.unsplash.com/photo-1520975922284-9e0ce827f4f6">
-<h3>Balmain Hoodie</h3>
+<h3>Premium Sneakers</h3>
 <p class="price">₹49,999</p>
 </div>
 
-<div class="card" onclick="openProduct('Off White Hoodie','₹59,999')">
-<img src="https://images.unsplash.com/photo-1521334884684-d80222895322">
-<h3>Off White Hoodie</h3>
-<p class="price">₹59,999</p>
+<div class="card" onclick="openProduct('Minimal Hoodie','₹29,999')">
+<img src="https://images.unsplash.com/photo-1520975922284-9e0ce827f4f6">
+<h3>Minimal Hoodie</h3>
+<p class="price">₹29,999</p>
 </div>
 
-<div class="card" onclick="openProduct('Versace T-Shirt','₹39,999')">
-<img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b">
-<h3>Versace T-Shirt</h3>
-<p class="price">₹39,999</p>
+<div class="card" onclick="openProduct('Classic Jacket','₹79,999')">
+<img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c">
+<h3>Classic Jacket</h3>
+<p class="price">₹79,999</p>
 </div>
 
 </div>
 
-<!-- POPUP -->
-<div class="popup" id="popup">
-  <div class="popup-box">
-    <span class="close" onclick="closePopup()">✖</span>
-    <h2 id="pname"></h2>
-    <p id="pprice"></p>
+</div>
 
-    <select id="size">
-      <option>Select Size</option>
-      <option>S</option><option>M</option><option>L</option><option>XL</option>
-    </select>
+<!-- PRODUCT DETAIL -->
+<div id="product" class="product-page">
+  <div class="back" onclick="goBack()">← Back</div>
+  <img id="pimg">
+  <h2 id="pname"></h2>
+  <p id="pprice"></p>
 
-    <input type="number" id="qty" value="1">
+  <select>
+    <option>Select Size</option>
+    <option>S</option>
+    <option>M</option>
+    <option>L</option>
+  </select>
 
-    <button onclick="orderNow()">Order on WhatsApp</button>
-  </div>
+  <br>
+
+  <button class="buy" onclick="buy()">BUY</button>
 </div>
 
 <script>
-let pname="", pprice="";
 
-function openProduct(n,p){
-  document.getElementById("popup").style.display="flex";
-  document.getElementById("pname").innerText=n;
-  document.getElementById("pprice").innerText=p;
-  pname=n; pprice=p;
+function openProduct(name,price){
+  document.getElementById('home').style.display='none';
+  document.getElementById('product').style.display='block';
+
+  document.getElementById('pname').innerText=name;
+  document.getElementById('pprice').innerText=price;
+  document.getElementById('pimg').src="https://picsum.photos/500?random="+Math.random();
 }
 
-function closePopup(){
-  document.getElementById("popup").style.display="none";
+function goBack(){
+  document.getElementById('home').style.display='block';
+  document.getElementById('product').style.display='none';
 }
 
-function orderNow(){
-  let size=document.getElementById("size").value;
-  let qty=document.getElementById("qty").value;
-
-  let msg=`Order:
-${pname}
-${pprice}
-Size: ${size}
-Qty: ${qty}`;
-
-  window.open("https://wa.me/919813070099?text="+encodeURIComponent(msg));
+function buy(){
+  window.open("https://wa.me/919813070099");
 }
+
 </script>
 
 </body>
