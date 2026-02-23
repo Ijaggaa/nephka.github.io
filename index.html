@@ -4,64 +4,100 @@
 <title>NEPHKA Luxury</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
 
 <style>
 
 body{
   margin:0;
-  background:#0b0b0b;
-  font-family:Montserrat;
+  background:#0a0a0a;
   color:white;
+  font-family:Montserrat;
 }
 
-/* NAV */
+/* NAVBAR */
 .nav{
   display:flex;
   justify-content:space-between;
-  padding:20px 50px;
-  background:black;
+  padding:20px 60px;
+  background:rgba(0,0,0,0.9);
+  position:sticky;
+  top:0;
 }
 .logo{
-  color:gold;
   font-family:'Playfair Display';
-  font-size:24px;
+  color:gold;
+  font-size:26px;
+}
+.nav a{
+  color:white;
+  margin:0 15px;
+  text-decoration:none;
+  font-size:14px;
+}
+
+/* HERO */
+.hero{
+  height:70vh;
+  background:url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d') center/cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.hero h1{
+  font-size:50px;
+  font-family:'Playfair Display';
+}
+.hero button{
+  padding:12px 30px;
+  border:none;
+  background:gold;
+  margin-top:20px;
+  cursor:pointer;
 }
 
 /* PRODUCTS */
 .products{
-  padding:50px;
+  padding:60px;
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:30px;
 }
 
 .card{
   background:#111;
-  padding:10px;
   border-radius:10px;
+  overflow:hidden;
+  transition:0.3s;
   cursor:pointer;
 }
-
+.card:hover{
+  transform:scale(1.05);
+}
 .card img{
   width:100%;
-  border-radius:10px;
+  height:300px;
+  object-fit:cover;
 }
-
-.price{color:gold}
+.card h3{
+  padding:10px;
+}
+.price{
+  color:gold;
+  padding:0 10px 10px;
+}
 
 /* POPUP */
 .popup{
   position:fixed;
   top:0;left:0;
-  width:100%;
-  height:100%;
+  width:100%;height:100%;
   background:rgba(0,0,0,0.9);
   display:none;
   justify-content:center;
   align-items:center;
 }
-
 .popup-box{
   background:#111;
   padding:30px;
@@ -69,8 +105,7 @@ body{
   max-width:400px;
   border-radius:10px;
 }
-
-.popup select, .popup input{
+.popup select,.popup input{
   width:100%;
   padding:10px;
   margin-top:10px;
@@ -78,7 +113,6 @@ body{
   color:white;
   border:1px solid #333;
 }
-
 .popup button{
   width:100%;
   padding:12px;
@@ -86,9 +120,7 @@ body{
   background:gold;
   border:none;
   font-weight:bold;
-  cursor:pointer;
 }
-
 .close{
   float:right;
   cursor:pointer;
@@ -99,10 +131,26 @@ body{
 
 <body>
 
+<!-- NAV -->
 <div class="nav">
   <div class="logo">NEPHKA</div>
+  <div>
+    <a href="#">Home</a>
+    <a href="#">Men</a>
+    <a href="#">Women</a>
+    <a href="#">Luxury</a>
+  </div>
 </div>
 
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <h1>Luxury Fashion Redefined</h1>
+    <button>Shop Now</button>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
 <div class="products">
 
 <div class="card" onclick="openProduct('Gucci Sneakers','₹72,999')">
@@ -135,35 +183,28 @@ body{
 <div class="popup" id="popup">
   <div class="popup-box">
     <span class="close" onclick="closePopup()">✖</span>
-
     <h2 id="pname"></h2>
     <p id="pprice"></p>
 
     <select id="size">
       <option>Select Size</option>
-      <option>S</option>
-      <option>M</option>
-      <option>L</option>
-      <option>XL</option>
+      <option>S</option><option>M</option><option>L</option><option>XL</option>
     </select>
 
-    <input type="number" id="qty" placeholder="Quantity" value="1">
+    <input type="number" id="qty" value="1">
 
     <button onclick="orderNow()">Order on WhatsApp</button>
   </div>
 </div>
 
 <script>
+let pname="", pprice="";
 
-let productName = "";
-let productPrice = "";
-
-function openProduct(name, price){
+function openProduct(n,p){
   document.getElementById("popup").style.display="flex";
-  document.getElementById("pname").innerText = name;
-  document.getElementById("pprice").innerText = price;
-  productName = name;
-  productPrice = price;
+  document.getElementById("pname").innerText=n;
+  document.getElementById("pprice").innerText=p;
+  pname=n; pprice=p;
 }
 
 function closePopup(){
@@ -171,20 +212,17 @@ function closePopup(){
 }
 
 function orderNow(){
-  let size = document.getElementById("size").value;
-  let qty = document.getElementById("qty").value;
+  let size=document.getElementById("size").value;
+  let qty=document.getElementById("qty").value;
 
-  let msg = `Order Details:
-Product: ${productName}
-Price: ${productPrice}
+  let msg=`Order:
+${pname}
+${pprice}
 Size: ${size}
-Quantity: ${qty}`;
+Qty: ${qty}`;
 
-  let url = "https://wa.me/919813070099?text=" + encodeURIComponent(msg);
-
-  window.open(url, '_blank');
+  window.open("https://wa.me/919813070099?text="+encodeURIComponent(msg));
 }
-
 </script>
 
 </body>
